@@ -1,9 +1,11 @@
-hi...new to github and Aws. how i submit my config file so it works?
+not why my key was deleted. i add new key below. 
+
+still need help configur file below...pleas
 
 i create this...
 
-$ aws configure set aws_access_key_id AKIA6OBDGIYK66IZ73EF
-$ aws configure set aws_secret_access_key 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
+$ aws configure set aws_access_key_id AKIA6OBDGIYKYRBKEC74
+$ aws configure set aws_secret_access_key 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
 $ aws configure set default.region us-wset-2
 $ aws configure set default.ca-group /path/to/ca-group.pem
 $ aws configure set region us-wset-1 --profile development
