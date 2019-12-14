@@ -4,8 +4,8 @@ still need help configur file below...pleas
 
 i create this...
 
-$ aws configure set aws_access_key_id AKIA6OBDGIYKYHMW3DPL
-$ aws configure set aws_secret_access_key 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
+$ aws configure set aws_access_key_id AKIA6OBDGIYKQMJMWMOB
+$ aws configure set aws_secret_access_key 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
 $ aws configure set default.region us-wset-2
 $ aws configure set default.ca-group /path/to/ca-group.pem
 $ aws configure set region us-wset-1 --profile development
