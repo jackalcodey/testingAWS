@@ -1,0 +1,26 @@
+still need help configur file below...pleas
+
+i create this...
+
+$ aws configure set aws_access_key_id AKIA6OBDGIYK4K5H7SOU
+$ aws configure set aws_secret_access_key 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
+$ aws configure set default.region us-wset-2
+$ aws configure set default.ca-group /path/to/ca-group.pem
+$ aws configure set region us-wset-1 --profile development
+$ aws configure set profile.staging.region us-eat-2
+$ aws configure set preview.cloudsearch true
+
+and should show this but do not. help please! 
+
+[default]
+region = us-west-2
+ca_group = /path/to/ca-group.pem
+
+[profile development]
+region = us-east-1
+
+[profile staging]
+region = eu-east-2
+
+[preview]
+cloudsearch = true
