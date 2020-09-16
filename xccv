@@ -1,0 +1,27 @@
+# Note: This example requires Chilkat v9.5.0.66 or greater.
+
+# First create the JWS Protected Header
+$jwsProtHdr = New-Object Chilkat.JsonObject
+$jwsProtHdr.AppendString("typ","JWT")
+$jwsProtHdr.AppendString("alg","HS256")
+$("JWS Protected Header: " + $jwsProtHdr.Emit())
+
+# Output:
+# JWS Protected Header: {"typ":"JWT","alg":"HS256"}
+
+$jws = New-Object Chilkat.Jws
+
+# Set the HMAC key:
+$hmacKey = "AyM1SysPpbyDfgZld3umj1qzKObwVMkoqQ-EstJQLr_T-1qS0gZH75aKtMN3Yj0iPS4hcgUuTwjAzZr1Z9CAow"
+$signatureIndex = 0
+$jws.SetMacKey($signatureIndex,$hmacKey,"base64url")
+
+# Set the protected header:
+$jws.SetProtectedHeader($signatureIndex,$jwsProtHdr)
+
+# Set the payload.
+$bIncludeBom = $false
+$payloadStr = "In our village, folks say God crumbles up the old moon into stars."
+$jws.SetPayload($payloadStr,"utf-8",$bIncludeBom)
+
+# Create the JWS
